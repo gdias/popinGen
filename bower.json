@@ -1,0 +1,16 @@
+{
+	"name" : "popinGenerator",
+	"version": "0.0.1-pre",
+	"license": "MIT",
+	"dependencies" : {
+		"jquery": "1.11.1"
+	},
+	"keywords": [
+		"jquery",
+		"javascript",
+		"popin",
+		"layer",
+		"library",
+		"plugin"
+	]
+}

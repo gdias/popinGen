@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Plugin jQuery popinGen</title>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="jquery.popinGen.js"></script>
+	<style type="text/css">
+		body {
+			font-family: Arial, Verdana, Helvetica;
+			font-size: 18px;
+		}
+
+		.popin, .layer {background-color:#FFF;border: 4px solid #EFEFEF;padding: 30px;}
+		.layer {padding: 10px; border: 2px solid #CCC;}
+	</style>
+</head>
+<body>
+<h1>jquery.popinGen.js</h1>
+<h2>Demo #01 : Open simple popin and Layer</h2>
+<a href="#test1" class="open-popin">&raquo;&nbsp;Open simple popin</a> <a href="#test2" class="open-layer">&raquo;&nbsp;Open simple layer</a>
+<div id="myPopin">
+	Great ! It's a content of popin, and you watch a result of jquery.popinGen.js
+</div>
+<div id="myLayer">
+	Impressive, it's really simple to use for layer too !
+</div>
+<script>
+	$(function(){
+		$().popinGen({
+			selector : ".open-popin",
+			targetContent : "myPopin",
+			classContainer : "popin"
+		});
+
+		$().popinGen({
+			selector : ".open-layer",
+			targetContent: "myLayer",
+			eventStart:"mouseover",
+			classContainer : "layer",
+			modeView : "layer",
+			customPosition : true,
+			relativePosition : {top:10,left:40}
+		});
+	});
+</script>
+
+<h2>Demo #02 : Close layer with blur event</h2>
+<span>Open layer with click and close with blur event</span><br/>
+<a href="#test3" class="open-layer-close">&raquo;&nbsp;Open layer</a>
+<div id="layerClose">Just click out of layer !</div>
+<script>
+	$(function(){
+		$().popinGen({
+			selector : ".open-layer-close",
+			targetContent : "layerClose",
+			classContainer : "layer",
+			modeView : "layer",
+			customPosition : true,
+			relativePosition : {top:10,left:40},
+			outerClose:true
+		});
+	});
+</script>
+
+<h2>Demo #03 : Open/Close when click on same handler (Toggle)</h2>
+<span>Simple parameter for add toggle comportment </span><br/>
+<a href="#test4" class="open-layer-toggle">&raquo;&nbsp;Open layer</a>
+<div id="layerToggle">Re-click on handler.. close layer !</div>
+<script>
+	$(function(){
+		$().popinGen({
+			selector : ".open-layer-toggle",
+			targetContent : "layerToggle",
+			classContainer : "layer",
+			modeView : "layer",
+			customPosition : true,
+			relativePosition : {top:10,left:40},
+			toggle : true
+		});
+	});
+</script>
+
+<h2>Demo #04 : Toggle open/close effect and blur close layer combined</h2>
+<span>Two last demos combined</span><br/>
+<a href="#test4" class="open-layer-toggleClose">&raquo;&nbsp;Open layer</a>
+<div id="layerToggleClose">Re-click on handler or click out of layer for close !</div>
+<script>
+	$(function(){
+		$().popinGen({
+			selector : ".open-layer-toggleClose",
+			targetContent : "layerToggleClose",
+			classContainer : "layer",
+			modeView : "layer",
+			customPosition : true,
+			relativePosition : {top:10,left:40},
+			outerClose : true,
+			toggle : true
+		});
+	});
+</script>
+
+<h2>Demo #05 : Multi binding to open same popin/layer</h2>
+<span>The selector option must be a CSS class, it possible to have a multiple element HTML with a same CSS class. Same class, same container</span> <br/>
+<input type="button" class="open-popin-multi" value="open by button"> <a href="#test5" class="open-popin-multi">&raquo;&nbsp;open by link</a>
+<div id="popinMulti">One simple popin open by two different way !</div>
+<script>
+	$(function(){
+		$().popinGen({
+			selector : ".open-popin-multi",
+			targetContent : "popinMulti",
+			classContainer : "popin"
+		});
+	});
+</script>
+
+<h2>Demo #06 : Add timer for prevent bad mouseover</h2>
+<span>In "layer" mode, if you have a button in the content of layer, a timer is necessary. The timer is already use for prevent bad hover and reduce opening unwanted</span>
+<a href="#test6" class="open-layer-timer">&raquo;&nbsp;open with timer</a>
+<div id="layerTimer">
+	Layer with timer
+</div>
+
+<script>
+	$(function(){
+		$().popinGen({
+			selector : ".open-layer-timer",
+			targetContent : "layerTimer",
+			classContainer : "layer",
+			eventStart:"mouseover",
+			modeView : "layer",
+			customPosition : true,
+			relativePosition : {top:10,left:40},
+			timer:500
+		});
+	});
+</script>
+
+<h2>Demo #07 : Auto close case</h2>
+<span>This plugin has an option for auto close the popin targeted. </span>
+<a href="#" class="open-popin-prehome">start auto close</a>
+<div id="popinPrehome">Auto-closed in 2 sec</div>
+<script>
+	$(function(){
+		$().popinGen({
+			selector : ".open-popin-prehome",
+			targetContent : "popinPrehome",
+			classContainer : "popin",
+			autoclose: true,
+			timeToAutoclose : 2000
+		});
+
+	});
+</script>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

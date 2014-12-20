@@ -1,0 +1,29 @@
+{
+	"name" : "popinGen",
+	"title" : "Popin Generator",
+    "description" : "jQuery plugin for create a modal popin or simple layer easily",
+    "version" : "1.0",
+    "author" : {
+	    "name" : "Guillaume DIAS COELHO",
+	    "email" : "me@guillaumedias.fr",
+	    "url" : "http://guillaumedias.fr/"
+    },
+    "keywords": [
+        "popin",
+        "plugin",
+        "layer",
+        "easyToUse"
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/popinGen/MIT-LICENSE.txt"
+        }
+    ],
+    "bugs": "https://github.com/gdias/jquery-popinGen/issues",
+    "homepage": "https://github.com/gdias/jquery-popinGen",
+    "docs" : "https://github.com/gdias/jquery-popinGen",
+    "dependencies": {
+        "jquery": ">=1.4"
+    }
+}

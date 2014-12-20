@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>  
+      <meta charset='UTF-8' />  
+      <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+     
+      <title>jQuery.simpleFAQ QUnit Test Runner</title>
+   
+      <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/qunit/1.14.0/qunit.min.css'>
+ 
+      <!-- add any external libraries your code needs -->
+      <script src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+ 
+      <script src='http://localhost:9000/src/jquery.popinGen.js'></script>
+      <!-- add any JS files under test (or put them in different .html files) -->
+ 
+      <script src='//cdnjs.cloudflare.com/ajax/libs/qunit/1.14.0/qunit.min.js'></script>
+ 
+      <!-- your tests, any and all to run with the given fixtures below -->
+      <script src='tests.js'></script>
+  </head>
+  <body> 
+    <div id="qunit"></div> <!-- QUnit fills this with results, etc -->
+    <div id='qunit-fixture'>
+
+      <a href="#test" class="open-popin0">test popin #1</a>
+      <div id="popinContent0"><a href="#close" class="close"></a></div>
+      
+      <a href="#test" class="open-popin1">test popin #2</a>
+      <div id="popinContent1"><a href="#close" class="close"></a></div>
+ 
+      <a href="#test" class="open-layer">test layer #1</a>
+      <div id="layerContent"><a href="#close" class="close"></a></div>
+     
+      <a href="#test" class="open-layer2">test layer #2</a>
+      <div id="layerContent2"><a href="#close" class="close"></a></div>
+ 
+      <a href="#test" class="open-layer3">test layer #3</a>
+      <div id="layerContent3"><a href="#close" class="close"></a></div>
+
+    </div>
+  </body>
+</html>
