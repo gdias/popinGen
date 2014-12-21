@@ -4,7 +4,7 @@
 ## PopinGen
 > v 1.0.1
 
-The popinGen.js is an jQuery plugin permit to create popin or layer and all interact and usecases with ease and simplicity. 
+The popinGen.js is an jQuery plugin permit to create easily and simplicity an popin or layer with all features. 
 
 ## Features
 + Easy generate popin or layer
@@ -124,10 +124,11 @@ $().popinGen({
 ```
 
 ##License
-MIT open source 2014
+2014 MIT Open Source license
 
 ##Contact info
 Website : http://guillaumedias.fr
+
 Email : me@guillaumedias.fr
 
 
