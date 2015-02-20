@@ -24,8 +24,8 @@ The popinGen.js is an jQuery plugin permit to create easily and simplicity an po
 
 > Tested on IE7+, Chrome, Firefox, Safari, IOS, Android 
 
-#### Popin or Layer... understand the differencez !
-Popin is a container placed up to all in page with an grey layer under, often call by click event
+#### Popin or Layer... It's different !
+Popin is a container placed up to all in page with an grey layer under, often call by click event.
 Layer is a container, less grey layer and placed relative at handler.
 
 ##Demos
@@ -36,7 +36,7 @@ http://data.guillaumedias.fr/popinGen/
 The more simple case for create an popin, you've need just 3 elements.
 
 1. Handler
-`<a href="#" class="open-popin">Open my popin</a>`
+`<a href="#" class="open-popin">Open popin</a>`
 
 2. Container
 ```
